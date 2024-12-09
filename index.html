@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Follow Me</title>
     <style>
-        /* Общие стили */
         * {
             margin: 0;
             padding: 0;
@@ -17,24 +16,29 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #007bff, #00a8ff);
+            background: linear-gradient(135deg, #ff4b5c, #e52e71);
             color: #fff;
             overflow: hidden;
         }
 
-        /* Анимация загрузки */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1.5s ease-in-out forwards;
+        /* Фон */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://github.com/OnlyFansfreetrial/paulaflovers/blob/main/image/Paula.JPG?raw=true') no-repeat center center/cover;
+            filter: brightness(0.5);
+            z-index: -1;
+            animation: zoomIn 10s infinite alternate;
         }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
+        @keyframes zoomIn {
+            0% {
+                transform: scale(1.05);
             }
-            to {
-                opacity: 1;
+            100% {
                 transform: scale(1);
             }
         }
@@ -45,11 +49,11 @@
             padding: 20px;
         }
         .content h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
+            font-size: 4em;
+            margin-bottom: 30px;
             color: #fff;
-            text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-            animation: slideInDown 1s ease-in-out;
+            text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            animation: slideInDown 1.5s ease-in-out;
         }
 
         @keyframes slideInDown {
@@ -63,28 +67,17 @@
             }
         }
 
-        /* Фон */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://github.com/OnlyFansfreetrial/paulaflovers/blob/main/image/Paula.JPG?raw=true') no-repeat center center/cover;
-            filter: brightness(0.8);
-            z-index: -1;
-        }
-
         /* Кнопки */
         .buttons {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             flex-wrap: wrap;
+            margin-top: 30px;
         }
         .btn {
             position: relative;
-            padding: 15px 30px;
+            padding: 20px 40px;
             font-size: 1.2em;
             font-weight: bold;
             text-transform: uppercase;
@@ -112,23 +105,25 @@
         .btn:hover::before {
             left: 0;
         }
-        .btn:hover {
-            color: #007bff;
-            background: #fff;
-        }
 
         .btn.onlyfans {
             border-color: #00a8ff;
+            box-shadow: 0 0 15px rgba(0, 168, 255, 0.5);
         }
         .btn.onlyfans:hover {
             color: #00a8ff;
+            background: #fff;
+            transform: scale(1.1);
         }
 
         .btn.instagram {
             border-color: #e1306c;
+            box-shadow: 0 0 15px rgba(225, 48, 108, 0.5);
         }
         .btn.instagram:hover {
             color: #e1306c;
+            background: #fff;
+            transform: scale(1.1);
         }
 
         /* Адаптивный дизайн */
@@ -137,17 +132,17 @@
                 font-size: 2.5em;
             }
             .btn {
-                font-size: 1em;
-                padding: 10px 20px;
+                font-size: 1.1em;
+                padding: 15px 25px;
             }
         }
         @media (max-width: 480px) {
             .content h1 {
-                font-size: 2em;
+                font-size: 2.2em;
             }
             .buttons {
                 flex-direction: column;
-                gap: 15px;
+                gap: 20px;
             }
             .btn {
                 width: 100%;
@@ -158,8 +153,8 @@
     </style>
 </head>
 <body>
-    <div class="background fade-in"></div>
-    <div class="content fade-in">
+    <div class="background"></div>
+    <div class="content">
         <h1>Welcome to My OnlyFans</h1>
         <div class="buttons">
             <a href="https://onlyfans.com/paula_flores/c441" target="_blank" class="btn onlyfans">OnlyFans</a>
