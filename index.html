@@ -67,7 +67,7 @@
             }
         }
 
-        /* Кнопки */
+        /* Основные кнопки */
         .buttons {
             display: flex;
             justify-content: center;
@@ -126,12 +126,38 @@
             transform: scale(1.1);
         }
 
+        /* Рекламные кнопки */
+        .advert-btn {
+            position: relative;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            font-weight: normal;
+            text-transform: uppercase;
+            color: #333;
+            background: #fff;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .advert-btn:hover {
+            color: #fff;
+            background: #ff4b5c;
+            border-color: #ff4b5c;
+            transform: scale(1.05);
+        }
+        .advert-btn:active {
+            transform: scale(0.98);
+        }
+
         /* Адаптивный дизайн */
         @media (max-width: 768px) {
             .content h1 {
                 font-size: 2.5em;
             }
-            .btn {
+            .btn, .advert-btn {
                 font-size: 1.1em;
                 padding: 15px 25px;
             }
@@ -144,7 +170,7 @@
                 flex-direction: column;
                 gap: 20px;
             }
-            .btn {
+            .btn, .advert-btn {
                 width: 100%;
                 max-width: 300px;
                 margin: 0 auto;
@@ -159,6 +185,10 @@
         <div class="buttons">
             <a href="https://onlyfans.com/paula_flores/c441" target="_blank" class="btn onlyfans">OnlyFans</a>
             <a href="https://www.instagram.com/paula.flvr/" target="_blank" class="btn instagram">Instagram</a>
+        </div>
+        <div class="buttons">
+            <a href="https://onlyfansfreetrial.github.io/best-promo/" target="_blank" class="advert-btn">Best Model</a>
+            <a href="https://suptop.top/click?o=2&a=3126" target="_blank" class="advert-btn">Find Milf</a>
         </div>
     </div>
 </body>
