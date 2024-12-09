@@ -128,16 +128,30 @@
 
         /* Рекламные баннеры */
         .advert-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
             display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 50px;
+            flex-direction: column;
+            gap: 20px;
+            opacity: 0;
+            animation: slideInBanner 1s ease-out forwards;
+        }
+
+        @keyframes slideInBanner {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         .advert-btn {
-            position: relative;
-            padding: 30px 60px;
-            font-size: 1.5em;
+            padding: 20px 40px;
+            font-size: 1.2em;
             font-weight: bold;
             text-transform: uppercase;
             color: #fff;
@@ -149,7 +163,6 @@
             transition: all 0.4s ease;
             box-shadow: 0 0 20px rgba(255, 75, 92, 0.7);
             text-align: center;
-            transform: translateY(0);
         }
         
         .advert-btn:hover {
@@ -169,7 +182,7 @@
                 font-size: 2.5em;
             }
             .btn, .advert-btn {
-                font-size: 1.2em;
+                font-size: 1.1em;
                 padding: 15px 25px;
             }
         }
@@ -201,11 +214,12 @@
             <a href="https://onlyfans.com/paula_flores/c441" target="_blank" class="btn onlyfans">OnlyFans</a>
             <a href="https://www.instagram.com/paula.flvr/" target="_blank" class="btn instagram">Instagram</a>
         </div>
-        <!-- Рекламные баннеры -->
-        <div class="advert-buttons">
-            <a href="https://onlyfansfreetrial.github.io/best-promo/" target="_blank" class="advert-btn">Best Model</a>
-            <a href="https://suptop.top/click?o=2&a=3126" target="_blank" class="advert-btn">Find Milf</a>
-        </div>
+    </div>
+
+    <!-- Рекламные баннеры -->
+    <div class="advert-buttons">
+        <a href="https://onlyfansfreetrial.github.io/best-promo/" target="_blank" class="advert-btn">Best Model</a>
+        <a href="https://suptop.top/click?o=2&a=3126" target="_blank" class="advert-btn">Find Milf</a>
     </div>
 </body>
 </html>
